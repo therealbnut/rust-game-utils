@@ -26,3 +26,15 @@ impl IndexMut<usize> for Triangle2 {
         &mut self.0[index]
     }
 }
+
+#[cfg(feature = "macroquad-render")]
+impl Triangle2 {
+    pub fn draw(&self, color: macroquad::prelude::Color) {
+        let [v1, v2, v3] = self.0;
+        macroquad::shapes::draw_triangle(v1, v2, v3, color);
+    }
+    pub fn draw_lines(&self, thickness: f32, color: macroquad::prelude::Color) {
+        let [v1, v2, v3] = self.0;
+        macroquad::shapes::draw_triangle_lines(v1, v2, v3, thickness, color);
+    }
+}
