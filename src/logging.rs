@@ -1,4 +1,4 @@
-use alloc::{borrow::Cow, vec::Vec};
+use alloc::{borrow::Cow, string::ToString, vec::Vec};
 
 use macroquad::prelude::*;
 
@@ -24,9 +24,9 @@ pub fn _log_args(
     log.add_entry(
         id,
         if let Some(that) = args.as_str() {
-            ::std::borrow::Cow::Borrowed(that)
+            ::alloc::borrow::Cow::Borrowed(that)
         } else {
-            ::std::borrow::Cow::Owned(args.to_string())
+            ::alloc::borrow::Cow::Owned(args.to_string())
         },
         timeout,
     );

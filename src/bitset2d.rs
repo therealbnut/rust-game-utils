@@ -1,5 +1,7 @@
 use core::ops::Range;
 
+use alloc::vec::Vec;
+
 pub struct BitSet2d {
     bits: Vec<u64>,
     x_range: Range<isize>,
@@ -113,8 +115,7 @@ fn get_bit(chunk: &u64, bit: u32) -> bool {
 
 #[cfg(test)]
 mod tests {
-    use std::collections::HashSet;
-
+    use hashbrown::HashSet;
     use rand::Rng;
 
     use super::*;

@@ -11,3 +11,4 @@ egui-macroquad = "0.15"
 
 [dev-dependencies]
 rand = "0.8"
+hashbrown = "0.13"
