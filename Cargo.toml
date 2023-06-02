@@ -10,11 +10,12 @@ default = [ "macroquad-render" ]
 macroquad-render = [ "macroquad", "egui-macroquad" ]
 
 [dependencies]
+rand = "0.8"
 glam = "0"
+bitvec = "1.0"
 
 macroquad = { version = "0.3", optional = true }
 egui-macroquad = { version = "0.15", optional = true }
 
 [dev-dependencies]
-rand = "0.8"
 hashbrown = "0.13"
