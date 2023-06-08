@@ -6,8 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = [ "macroquad-render" ]
+default = [ "macroquad-render", "vm-diagnostics" ]
 macroquad-render = [ "macroquad", "egui-macroquad" ]
+vm-diagnostics = ["rune/emit"]
 
 [dependencies]
 rand = "0.8"

@@ -9,3 +9,4 @@ pub mod logging;
 pub mod quadrilateral;
 pub mod triangle;
 pub mod update_steps;
+pub mod vm;
